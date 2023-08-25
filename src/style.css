@@ -1,0 +1,37 @@
+* {
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+#pageContainer {
+    display: grid;
+    grid-template-rows: 100px 2fr 1fr 100px;
+    height: 100%;
+}
+
+
+header {
+    grid-row: 1 / 2;
+    margin: 0;
+    background-color: blue;
+}
+
+
+.welcome {
+    grid-row: 2 / 3;
+    background-image: url(./img/welcome-bg.jpg);
+}
+
+.info {
+    grid-row: 3 / 4;
+}
+
+footer {
+    background-color: rgb(133, 49, 67);
+    grid-row: 4 / 5;
+}

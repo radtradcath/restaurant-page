@@ -1,51 +1,79 @@
 @font-face {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Philosopher';
     font-weight: 400;
     font-style: normal;
     src: url('./fonts/Philosopher/Philosopher-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Philosopher';
     font-weight: 700;
     font-style: normal;
     src: url('./fonts/Philosopher/Philosopher-Bold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Philosopher';
     font-style: italic;
     src: url('./fonts/Philosopher/Philosopher-Italic.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Philosopher';
     font-weight: 700;
     font-style: italic;
     src: url('./fonts/Philosopher/Philosopher-BoldItalic.ttf') format('truetype');
 }
 
 * {
-    border: 1px solid red;
+    font-family: 'Philosopher', sans-serif;
     box-sizing: border-box;
 }
 
 body {
+    display: flex;
+    justify-content: center;
     margin: 0;
-    height: 150vh;
+    height: 180vh;
+    background-image: url(./img/body-bg.jpg);
+    background-size: 13%;
+    background-attachment: fixed;
 }
 
 #pageContainer {
+    position: relative;
     display: grid;
-    grid-template-rows: 50px 3fr 2fr 50px;
+    grid-template-rows: 70px 1fr 1fr 70px;
     height: 100%;
+    width: 75%;
 }
 
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
     grid-row: 1 / 2;
     margin: 0;
     background-color: blue;
+    width: inherit;
+    box-shadow: 0px 9px 16px 0px rgba(255,255,255,0.61);
+}
+
+ul {
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    margin-right: 30px;
+}
+
+header div {
+    margin: 10px 0 5px 10px;
+    width: 80px;
+    height: 80px;
 }
 
 
@@ -55,16 +83,45 @@ header {
 }
 
 .welcome h1 {
+    padding-left: 5%;
+    margin: 8% 0 15% 0;
     font-family: 'Philosopher', sans-serif;
-    font-weight: 400;
+    font-size: 4em;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+.welcome h2 {
+    text-align: end;
+    width: 60%;
+    padding-right: 8%;
+    margin: 30% 0 4% 40%;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
     font-style: normal;
     color: white;
 }
 
 .info {
+    color: rgb(133, 103, 107);
+    font-size: 1.5em;
     grid-row: 3 / 4;
     background-image: url(./img/info-bg.jpg);
-    background-position: ;
+    background-size: 115%;
+}
+
+.info :first-child {
+    padding-right: 8%;
+    padding-left: 5%;
+    margin: 10% 0 15% 0;
+}
+
+.info :last-child {
+    padding-right: 8%;
+    padding-left: 5%;
+    margin: 0 0 15% 0;
 }
 
 footer {

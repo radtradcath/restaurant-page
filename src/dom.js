@@ -1,4 +1,5 @@
 export {renderLandingPage};
+import Logo from './img/header-logo.svg'
 
 function renderLandingPage() {
 const body = document.querySelector('body');
@@ -28,24 +29,31 @@ pageContainer.appendChild(footer);
 
 header.appendChild(logo);
 header.appendChild(nav);
+const myLogo = new Image();
+myLogo.src = Logo;
+logo.appendChild(myLogo);
 
 
 nav.appendChild(navlink1);
 nav.appendChild(navlink2);
 nav.appendChild(navlink3);
+navlink1.textContent = "Home";
+navlink2.textContent = "Menu";
+navlink3.textContent = "Contact";
 
 
 welcomeContainer.classList.add('welcome');
 welcomeContainer.appendChild(welcomeHeader);
-welcomeHeader.textContent = "Hi, this is my new website";
+welcomeHeader.textContent = "Welcome to BBQ Bro!";
 welcomeContainer.appendChild(welcomeMessage);
+welcomeMessage.textContent = "What could be better than a suculent burger with crunchy fries? Oh, I see: THAT alongside a milk-shake!"
 
 
 infoContainer.classList.add('info')
 infoContainer.appendChild(infoPara1);
-infoPara1.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nesciunt sint vero labore eaque qui."
+infoPara1.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat reprehenderit eius. Debitis sit laborum, praesentium perferendis maiores ex doloribus molestiae! Maiores minus repellat tenetur voluptas molestias quibusdam optio dolorum.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat reprehenderit eius. Debitis sit laborum, praesentium perferendis maiores ex doloribus molestiae! Maiores minus repellat tenetur voluptas molestias quibusdam optio dolorum.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat reprehenderit eius. "
 infoContainer.appendChild(infoPara2);
-infoPara2.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat reprehenderit eius. Debitis sit laborum, praesentium perferendis maiores ex doloribus molestiae! Maiores minus repellat tenetur voluptas molestias quibusdam optio dolorum."
+infoPara2.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat reprehenderit eius. Debitis sit laborum, praesentium perferendis maiores ex doloribus molestiae! Maiores minus repellat tenetur voluptas molestias quibusdam optio dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat reprehenderit eius. Debitis sit laborum, praesentium perferendis maiores ex doloribus molestiae! Maiores minus repellat tenetur voluptas molestias quibusdam optio dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat reprehenderit eius. Debitis sit laborum, praesentium perferendis maiores ex doloribus molestiae! Maiores minus repellat tenetur voluptas molestias quibusdam optio dolorum."
 
 
 footer.appendChild(footerTM);

@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
-    height: 180vh;
+    height: 100vh;
     background-image: url(./img/body-bg.jpg);
     background-size: 13%;
     background-attachment: fixed;
@@ -43,9 +43,73 @@ body {
 #pageContainer {
     position: relative;
     display: grid;
-    grid-template-rows: 70px 1fr 1fr 70px;
+    grid-template-rows: 70px 1fr 70px;
     height: 100%;
     width: 75%;
+}
+
+#formContainer {
+    grid-row: 2 / 3;
+    background-color: rgb(243, 220, 9);
+    height: 100%;
+    display: flex;    
+    justify-content: center;
+}
+
+form {
+    font-size: 1.5em;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    margin: auto;
+    background-color: rgba(8, 8, 75, 0.966);
+    height: 85%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+form :first-child {
+    font-size: 2em;
+    position: absolute;
+    top: 3%;
+    left: 10%;
+}
+
+form button {
+    font-size: 1.5em;
+    color: rgba(8, 8, 75, 0.966);
+    background-color: rgb(236, 236, 53);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 160px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+form button:hover {
+    color: rgba(8, 8, 75, 0.966);
+    background-color: rgb(240, 240, 175);
+}
+
+form textarea {
+    padding: 5px 5px;
+    font-size: 1rem;
+    resize: none;
+}
+
+input {
+    font-size: 1em;
+    padding-left: 20px;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 0px;
 }
 
 
@@ -56,9 +120,9 @@ header {
     position: fixed;
     grid-row: 1 / 2;
     margin: 0;
-    background-color: blue;
+    background-color: rgba(8, 8, 75, 0.966);
     width: inherit;
-    box-shadow: 0px 9px 16px 0px rgba(255,255,255,0.61);
+    box-shadow: 0px 9px 16px -6px rgba(5,5,5,1);
 }
 
 ul {
@@ -76,15 +140,21 @@ header div {
     height: 80px;
 }
 
-
-.welcome {
+#mainContent {
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.welcome {    
     background-image: url(./img/welcome-bg.jpg);
+    grid-row: 1 / 2;
+    margin-bottom: 30px;
 }
 
 .welcome h1 {
     padding-left: 5%;
-    margin: 8% 0 15% 0;
+    margin-top: 10%;
     font-family: 'Philosopher', sans-serif;
     font-size: 4em;
     font-weight: 700;
@@ -94,9 +164,9 @@ header div {
 
 .welcome h2 {
     text-align: end;
-    width: 60%;
+    margin-left: 40%;
+    margin-top: 25%;
     padding-right: 8%;
-    margin: 30% 0 4% 40%;
     font-family: 'Philosopher', sans-serif;
     font-size: 3em;
     font-weight: 700;
@@ -105,26 +175,42 @@ header div {
 }
 
 .info {
-    color: rgb(133, 103, 107);
+    color: rgb(18, 28, 121);
     font-size: 1.5em;
-    grid-row: 3 / 4;
     background-image: url(./img/info-bg.jpg);
     background-size: 115%;
+    font-weight: 700;
+    grid-row: 2 / 3;
 }
 
 .info :first-child {
+    margin-top: 15%;
+    background-color: rgba(255, 255, 255, 0.295);
     padding-right: 8%;
     padding-left: 5%;
-    margin: 10% 0 15% 0;
+    word-spacing: 1px;
 }
 
 .info :last-child {
+    background-color: rgba(255, 255, 255, 0.295);
     padding-right: 8%;
     padding-left: 5%;
-    margin: 0 0 15% 0;
 }
 
 footer {
-    background-color: rgb(133, 49, 67);
-    grid-row: 4 / 5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: rgba(8, 8, 75, 0.966);
+    grid-row: 3 / 4;
+}
+
+footer img {
+    height: 50px;
+    width: auto;
+}
+
+a:visited {
+    color: white;
 }

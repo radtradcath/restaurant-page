@@ -1,7 +1,9 @@
 export { renderTemplate };
 import { renderContact } from './contact';
-import Logo from './img/header-logo.svg'
 import { renderLanding } from './landing-page';
+import { renderMenu } from './menu';
+import Logo from './img/header-logo.svg'
+
 
 function renderTemplate() {
     const body = document.querySelector('body');
@@ -54,6 +56,8 @@ function renderTemplate() {
                 renderContact();
                 break;
             case 'Menu':
+                body.removeChild(pageContainer); 
+                renderMenu();
                 break;
             default:                
         }

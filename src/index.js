@@ -3,6 +3,6 @@ import {renderContactPage} from './contact.js';
 import { renderMenu } from './menu.js';
 import './style.css';
 
-renderMenu();
+renderLanding();
 
 
